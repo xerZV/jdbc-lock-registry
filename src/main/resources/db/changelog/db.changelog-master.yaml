@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: init-schema
+      author: nikolay@simitchiyski.com
+      changes:
+        - sqlFile:
+            dbms: h2
+            encoding: UTF-8
+            endDelimiter: \nGO
+            path: db.changelog-1.0.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
