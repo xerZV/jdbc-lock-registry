@@ -3,21 +3,19 @@ package com.simitchiyski.lockregistry.web.trade;
 import com.simitchiyski.lockregistry.core.trade.TradeService;
 import com.simitchiyski.lockregistry.core.trade.mapper.TradeMapper;
 import com.simitchiyski.lockregistry.web.trade.dto.CreateTradeDTO;
+import com.simitchiyski.lockregistry.web.trade.dto.TradeDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import com.simitchiyski.lockregistry.web.trade.dto.TradeDTO;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
-
 import java.util.List;
 
-import static org.springframework.http.ResponseEntity.*;
-import static org.springframework.web.servlet.support.ServletUriComponentsBuilder.*;
+import static org.springframework.http.ResponseEntity.ok;
+import static org.springframework.web.servlet.support.ServletUriComponentsBuilder.fromCurrentRequest;
 
 @Validated
 @RestController

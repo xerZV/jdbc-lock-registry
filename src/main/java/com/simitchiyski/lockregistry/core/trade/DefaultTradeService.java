@@ -16,11 +16,10 @@ import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 import java.util.List;
 
-import static com.simitchiyski.lockregistry.config.queue.QueueProperties.*;
+import static com.simitchiyski.lockregistry.config.queue.QueueProperties.ReleaseDate;
 import static com.simitchiyski.lockregistry.core.trade.TradeStatus.*;
-import static java.lang.String.*;
+import static java.lang.String.format;
 import static java.time.ZoneOffset.UTC;
-import static java.time.ZonedDateTime.now;
 import static org.springframework.data.domain.PageRequest.of;
 
 @Slf4j
