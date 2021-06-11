@@ -4,7 +4,6 @@ import com.simitchiyski.lockregistry.config.queue.QueueProperties;
 import com.simitchiyski.lockregistry.core.trade.Trade;
 import com.simitchiyski.lockregistry.core.trade.TradeService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.integration.support.locks.LockRegistry;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -20,7 +19,6 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
 @Service
 public class DefaultTradeScheduler extends TradeScheduler {
 
-    @Autowired
     public DefaultTradeScheduler(final LockRegistry lockRegistry, final TradeService tradeService, final QueueProperties queueProperties) {
         super(lockRegistry, tradeService, queueProperties);
     }

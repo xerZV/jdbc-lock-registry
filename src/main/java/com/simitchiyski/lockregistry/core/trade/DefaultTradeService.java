@@ -67,6 +67,7 @@ public class DefaultTradeService implements TradeService {
     @Transactional
     public void submit(final Long id) {
         tradeRepository.updateStatusAndReleasedDatetime(id, SUBMITTED, nowInUTC());
+        log.info("Order with id={} has been submitted", id);
     }
 
     @Override
@@ -93,6 +94,7 @@ public class DefaultTradeService implements TradeService {
         trade.setReleaseDateTime(releaseDateTime(trade.getCutoffDateTime().toLocalDate()));
 
         tradeRepository.save(trade);
+        log.info("Order with id={} has been queued", trade.getId());
     }
 
     private LocalDateTime releaseDateTime(final LocalDate cutoffDate) {
